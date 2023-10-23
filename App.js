@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from "react-native";
+import { useFonts } from "expo-font";
+import HomeStack from "./routes/homeStack";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  const [fontLoaded] = useFonts({
+    "numino-regular": require("./assets/fonts/Nunito-Regular.ttf"),
+    "numino-bold": require("./assets/fonts/Nunito-Bold.ttf"),
+    "roboto-regular": require("./assets/fonts/Roboto-Regular.ttf"),
+    "roboto-bold": require("./assets/fonts/Roboto-Black.ttf"),
+  });
+  if (fontLoaded) {
+    return <HomeStack />;
+  } else {
+    return (
+      <View>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
