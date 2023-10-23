@@ -10,13 +10,26 @@ export default function HomeStack() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen
-          name="ReviewDetails"
-          component={ReviewDetails}
-          options={{ title: "Review Details" }}
-        />
-        <Stack.Screen name="About" component={About} />
+        <Stack.Group
+          screenOptions={{
+            headerTintColor: "purple",
+            headerStyle: {
+              backgroundColor: "lightblue",
+            },
+          }}
+        >
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{ title: "GameZone" }}
+          />
+          <Stack.Screen
+            name="ReviewDetails"
+            component={ReviewDetails}
+            options={{ title: "Review Details" }}
+          />
+          <Stack.Screen name="About" component={About} />
+        </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>
   );
