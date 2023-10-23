@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { globalStyles } from "../styles";
-import { View, Text, FlatList, Button } from "react-native";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
 
 export default function Home() {
   const [reviews, setReviews] = useState([
@@ -36,10 +36,13 @@ export default function Home() {
       <FlatList
         data={reviews}
         renderItem={({ item }) => (
-          <Text style={globalStyles.titleText}>{item.title}</Text>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("ReviewDetails", item)}
+          >
+            <Text style={globalStyles.titleText}>{item.title}</Text>
+          </TouchableOpacity>
         )}
       />
-      <Button title="press me" onPress={pressHandler} />
     </View>
   );
 }
