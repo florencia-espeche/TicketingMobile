@@ -1,11 +1,10 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Home from "../screens/home";
-import ReviewDetails from "../screens/reviewDetails";
+import About from "../screens/about";
 import Header from "../shared/header";
 
 const Stack = createNativeStackNavigator();
 
-export default function HomeStack() {
+export default function AboutStack() {
   return (
     <Stack.Navigator
       initialRouteName="GameZone"
@@ -20,17 +19,10 @@ export default function HomeStack() {
       }}
     >
       <Stack.Screen
-        name="Home"
-        component={Home}
+        name="About"
+        component={About}
         options={{
-          headerTitle: () => <Header title="Game Zone" />,
-        }}
-      />
-      <Stack.Screen
-        name="ReviewDetails"
-        component={ReviewDetails}
-        options={{
-          headerTitle: () => <Header title="Review Details" />,
+          headerTitle: () => <Header title="ABOUT" />,
         }}
       />
     </Stack.Navigator>

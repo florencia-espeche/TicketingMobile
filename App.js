@@ -1,6 +1,6 @@
 import { Text, View } from "react-native";
 import { useFonts } from "expo-font";
-import HomeStack from "./routes/homeStack";
+import DrawerNavigator from "./routes/drawer";
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -10,7 +10,7 @@ export default function App() {
     "roboto-bold": require("./assets/fonts/Roboto-Black.ttf"),
   });
   if (fontLoaded) {
-    return <HomeStack />;
+    return <DrawerNavigator />;
   } else {
     return (
       <View>
