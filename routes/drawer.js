@@ -4,6 +4,7 @@ import HomeStack from "./homeStack";
 import AboutStack from "./aboutStack";
 import Home from "../screens/home";
 import About from "../screens/about";
+import { Image } from "react-native";
 
 const Drawer = createDrawerNavigator();
 
@@ -13,13 +14,19 @@ export default function DrawerNavigator() {
       <Drawer.Navigator
         initialRouteName="GameZone"
         screenOptions={{
-          headerTintColor: "darkgreen",
+          headerTintColor: "#333",
           headerStyle: {
             backgroundColor: "#aaa",
           },
           headerTitleStyle: {
             fontWeight: "bold",
           },
+          headerBackground: () => (
+            <Image
+              source={require("../assets/game_bg.png")}
+              style={{ height: 90 }}
+            />
+          ),
         }}
       >
         <Drawer.Screen name="Home" component={HomeStack} />

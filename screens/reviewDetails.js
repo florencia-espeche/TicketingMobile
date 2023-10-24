@@ -1,17 +1,30 @@
-import { globalStyles } from "../styles";
-import { View, Text } from "react-native";
+import { globalStyles, images } from "../styles";
+import { View, Text, Image, StyleSheet } from "react-native";
 import Card from "../shared/card";
 
-const ReviewDetails = ({ route }) => {
+export default function ReviewDetails({ route }) {
+  const { title, body, rating } = route.params;
   return (
     <View style={globalStyles.container}>
       <Card>
-        <Text>{route.params.title}</Text>
-        <Text>{route.params.body}</Text>
-        <Text>{route.params.rating}</Text>
+        <Text>{title}</Text>
+        <Text>{body}</Text>
+        <View style={globalStyles.rating}>
+          <Text>GameZone rating: </Text>
+          <Image source={images.ratings[rating]} />
+        </View>
       </Card>
     </View>
   );
-};
+}
 
-export default ReviewDetails;
+const styles = StyleSheet.create({
+  rating: {
+    flexDirection: "row",
+    justifyContent: "center",
+    paddingTop: 16,
+    marginTop: 16,
+    borderTopWidth: 1,
+    borderTopColor: "#eee",
+  },
+});

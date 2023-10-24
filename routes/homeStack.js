@@ -12,7 +12,7 @@ export default function HomeStack() {
       screenOptions={{
         headerTintColor: "purple",
         headerStyle: {
-          backgroundColor: "lightblue",
+          backgroundColor: "#eee",
         },
         headerTitleStyle: {
           fontWeight: "bold",
