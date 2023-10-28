@@ -5,7 +5,9 @@ import { View, Text } from "react-native";
 const About = () => {
   return (
     <View style={globalStyles.container}>
-      <Text>About Screen</Text>
+      <Text style={[globalStyles.titleText, { textAlign: "center" }]}>
+        flor.espeche@gmail.com
+      </Text>
     </View>
   );
 };

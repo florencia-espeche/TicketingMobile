@@ -30,7 +30,7 @@ export default function ReviewForm({ addReview }) {
           <View>
             <TextInput
               style={globalStyles.input}
-              placeholder="Review title"
+              placeholder="Title"
               onChangeText={props.handleChange("title")}
               value={props.values.title}
               onBlur={props.handleBlur("title")}
@@ -41,7 +41,7 @@ export default function ReviewForm({ addReview }) {
             <TextInput
               multiline
               style={globalStyles.input}
-              placeholder="Review body"
+              placeholder="Description"
               onChangeText={props.handleChange("body")}
               value={props.values.body}
               onBlur={props.handleBlur("body")}
@@ -51,7 +51,7 @@ export default function ReviewForm({ addReview }) {
             </Text>
             <TextInput
               style={globalStyles.input}
-              placeholder="Rating (1-5)"
+              placeholder="Priority (1-5)"
               onChangeText={props.handleChange("rating")}
               value={props.values.rating}
               keyboardType="numeric"
@@ -60,7 +60,7 @@ export default function ReviewForm({ addReview }) {
             <Text style={globalStyles.errorText}>
               {props.touched.rating && props.errors.rating}
             </Text>
-            <Button text="submit" onPress={props.handleSubmit} />
+            <Button text="create" onPress={props.handleSubmit} />
           </View>
         )}
       </Formik>

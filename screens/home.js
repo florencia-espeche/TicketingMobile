@@ -19,19 +19,19 @@ export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
   const [reviews, setReviews] = useState([
     {
-      title: "Zelda, Breath of Fresh Air",
+      title: "Consume Backend API",
       rating: 5,
       body: "lorem ipsum",
       key: "1",
     },
     {
-      title: "Gotta Catch Them All (again)",
+      title: "Ticket Progress Bar",
       rating: 4,
       body: "lorem ipsum",
       key: "2",
     },
     {
-      title: 'Not So "Final" Fantasy',
+      title: "Fix Navigation Menu",
       rating: 3,
       body: "lorem ipsum",
       key: "3",

@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 export default function HomeStack() {
   return (
     <Stack.Navigator
-      initialRouteName="GameZone"
+      initialRouteName="Ticketing"
       screenOptions={{
         headerTintColor: "purple",
         headerStyle: {
@@ -23,14 +23,14 @@ export default function HomeStack() {
         name="Home"
         component={Home}
         options={{
-          headerTitle: () => <Header title="Game Zone" />,
+          headerTitle: () => <Header title="Ticketing" />,
         }}
       />
       <Stack.Screen
         name="ReviewDetails"
         component={ReviewDetails}
         options={{
-          headerTitle: () => <Header title="Review Details" />,
+          headerTitle: "Ticket Details",
         }}
       />
     </Stack.Navigator>

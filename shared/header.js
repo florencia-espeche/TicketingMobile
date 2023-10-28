@@ -1,7 +1,6 @@
-import { StyleSheet, View, Text, Image, ImageBackground } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import { Dimensions } from "react-native";
 
 export default function Header({ title }) {
   const navigation = useNavigation();
@@ -10,30 +9,28 @@ export default function Header({ title }) {
   };
 
   return (
-    <ImageBackground style={styles.header}>
-      {/* <MaterialIcons
-        name="menu"
+    <View style={styles.header}>
+      <MaterialIcons
+        name="confirmation-number"
         size={28}
         style={styles.icon}
-        onPress={openMenu}
-      /> */}
-      <View style={styles.headerTitle}>
-        <Image
-          source={require("../assets/heart_logo.png")}
-          style={styles.headerImage}
-        />
+        // onPress={openMenu}
+      />
+      <View>
         <Text style={styles.headerText}>{title}</Text>
       </View>
-    </ImageBackground>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   header: {
-    width: Dimensions.get("screen").width,
+    width: "100%",
     height: "100%",
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "center",
+    marginHorizontal: -10,
   },
   headerText: {
     fontWeight: "bold",
@@ -41,18 +38,9 @@ const styles = StyleSheet.create({
     color: "purple",
     letterSpacing: 1,
     fontFamily: "roboto-bold",
+    marginLeft: 10,
   },
   icon: {
-    position: "absolute",
-    left: 16,
     color: "purple",
-  },
-  headerTitle: {
-    flexDirection: "row",
-  },
-  headerImage: {
-    width: 26,
-    height: 26,
-    marginHorizontal: 10,
   },
 });

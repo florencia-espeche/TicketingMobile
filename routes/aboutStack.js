@@ -7,11 +7,11 @@ const Stack = createNativeStackNavigator();
 export default function AboutStack() {
   return (
     <Stack.Navigator
-      initialRouteName="GameZone"
+      initialRouteName="Ticketing"
       screenOptions={{
         headerTintColor: "purple",
         headerStyle: {
-          backgroundColor: "#eee",
+          backgroundColor: "snow",
         },
         headerTitleStyle: {
           fontWeight: "bold",
@@ -22,7 +22,7 @@ export default function AboutStack() {
         name="About"
         component={About}
         options={{
-          headerTitle: () => <Header title="ABOUT" />,
+          headerTitle: () => <Header title="About" />,
         }}
       />
     </Stack.Navigator>

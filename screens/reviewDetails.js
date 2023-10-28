@@ -1,6 +1,7 @@
-import { globalStyles, images } from "../styles";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { globalStyles } from "../styles";
+import { View, Text, StyleSheet } from "react-native";
 import Card from "../shared/card";
+import { MaterialIcons } from "@expo/vector-icons";
 
 export default function ReviewDetails({ route }) {
   const { title, body, rating } = route.params;
@@ -9,9 +10,33 @@ export default function ReviewDetails({ route }) {
       <Card>
         <Text>{title}</Text>
         <Text>{body}</Text>
-        <View style={globalStyles.rating}>
-          <Text>GameZone rating: </Text>
-          <Image source={images.ratings[rating]} />
+        <View style={styles.rating}>
+          <Text>Priority: </Text>
+          <MaterialIcons
+            name="local-fire-department"
+            size={24}
+            color={`${rating >= 1 ? "red" : "grey"}`}
+          />
+          <MaterialIcons
+            name="local-fire-department"
+            size={24}
+            color={`${rating >= 2 ? "red" : "grey"}`}
+          />
+          <MaterialIcons
+            name="local-fire-department"
+            size={24}
+            color={`${rating >= 3 ? "red" : "grey"}`}
+          />
+          <MaterialIcons
+            name="local-fire-department"
+            size={24}
+            color={`${rating >= 4 ? "red" : "grey"}`}
+          />
+          <MaterialIcons
+            name="local-fire-department"
+            size={24}
+            color={`${rating >= 5 ? "red" : "grey"}`}
+          />
         </View>
       </Card>
     </View>
