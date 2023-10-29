@@ -8,12 +8,6 @@
 
 ### 3. Open the application in your browser at http://localhost:3000.
 
-#
+### You can also view the mobile version of the application by scanning the QR code in the terminal or browser tab using the Expo app on your mobile device.
 
-### You can also view the mobile version of the application by scanning the QR code in the terminal or browser tab
-
-### using the Expo app on your mobile device.
-
-#
-
-# ![Ticketing Mobile](mobile.png)
+![Ticketing Mobile](mobile.png)
