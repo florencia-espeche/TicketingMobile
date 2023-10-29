@@ -10,4 +10,4 @@
 
 ### You can also view the mobile version of the application by scanning the QR code in the terminal or browser tab using the Expo app on your mobile device.
 
-![Ticketing Mobile](./assets/images/mobile.png)
+![Ticketing Mobile](./assets/mobile.png)
